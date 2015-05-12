@@ -14,7 +14,7 @@ app = express()
 app.use coffee(
   src: 'src/coffee'
   dest: 'public/js'
-  prefix: '/js' # will remove /js from coffee queries
+  prefix: '/js' # will remove /js from .coffee file path
   compilerOpts: bare: true
 )
 
