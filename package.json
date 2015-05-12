@@ -1,0 +1,41 @@
+{
+  "name": "express-coffee-script",
+  "version": "0.1.0",
+  "description": "CoffeeScript middleware for Express",
+  "author": {
+    "name": "Doğan Çelik",
+    "email": "dogancelik93@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "express",
+    "coffee-script",
+    "coffeescript",
+    "middleware",
+    "connect"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dogancelik/express-coffee-script.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dogancelik/express-coffee-script/issues"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "prepublish": "coffee -bo lib/ src/",
+    "watch": "coffee -wbo lib/ src/"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "bluebird": "^2.9.25",
+    "coffee-script": "^1.9.2",
+    "debug": "^2.2.0",
+    "mkdirp": "^0.5.0"
+  },
+  "devDependencies": {
+    "express": "^4.12.3"
+  }
+}
