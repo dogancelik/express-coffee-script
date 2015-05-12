@@ -21,7 +21,7 @@ app.use coffee(
 app.use express.static 'public'
 ```
 
-*express-coffee-script* compiles your CoffeeScript files only, it doesn't serve them. You need to use this *express.static* because *express.static* serves your compiled JS files not this middleware.
+*express-coffee-script* compiles your CoffeeScript files only, it doesn't serve them. You need to use *express.static* because *express.static* serves your compiled JS files not this middleware.
 
 ## How to install?
 [![NPM](https://nodei.co/npm/express-coffee-script.png?mini=true)](https://nodei.co/npm/express-coffee-script/)
