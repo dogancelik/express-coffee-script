@@ -1,6 +1,8 @@
 # Express Coffee Script
 ![Screenshot](extras/screenshot.jpg)
 
+### Looking for beta testers!
+
 Note: Screenshot is taken in *DEBUG* mode. You will not see these messages unless you set DEBUG to `express-coffee-script`
 
 [![NPM](https://nodei.co/npm/express-coffee-script.png?downloads=true&stars=true)](https://nodei.co/npm/express-coffee-script/)
