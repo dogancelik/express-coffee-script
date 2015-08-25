@@ -29,6 +29,7 @@ middleware = (options = {}) ->
   options.compile ?= -> coffee.compile.apply(coffee, arguments)
   options.compilerOpts ?= {}
   options.force ?= false
+  options.ext ?= '.coffee'
 
   (req, res, next) ->
     return next() if req.method != 'GET' and req.method != 'HEAD'
@@ -37,7 +38,7 @@ middleware = (options = {}) ->
 
     return next() if not regexJs.test(pathname)
 
-    pathnameCs = pathname.replace(regexJs, '.coffee')
+    pathnameCs = pathname.replace(regexJs, options.ext)
 
     if options.prefix?
       pathname = removePrefix(pathname, options.prefix)

@@ -1,11 +1,8 @@
 # Express Coffee Script
-![Screenshot](extras/screenshot.jpg)
 
-### Looking for beta testers!
+An Express middleware for CoffeeScript.
 
-Note: Screenshot is taken in *DEBUG* mode. You will not see these messages unless you set DEBUG to `express-coffee-script`
-
-[![NPM](https://nodei.co/npm/express-coffee-script.png?downloads=true&stars=true)](https://nodei.co/npm/express-coffee-script/)
+[![NPM](https://nodei.co/npm/express-coffee-script.png)](https://nodei.co/npm/express-coffee-script/)
 
 ## How to use?
 Put it into your Express like this:
@@ -62,15 +59,23 @@ With this function you can customize your compiler:
 
 In this example we will use `coffee-react` instead of `coffee-script`
 ```coffee
-app.use coffee(
+app.use coffee
   src: 'src/coffee'
   dest: 'public/js'
   prefix: '/js'
-  compile: (str, opts) ->
-    opts = bare: true
-    require('coffee-react').compile(str, opts)
-)
+  compile: require('coffee-react')
+  compilerOpts: { bare: true }
+  ext: '.cjsx'
 ```
 
 ### compilerOpts (*object*)
 This object will be passed to the compile function.
+
+### ext (*string*)
+Middleware will look for this file extension. Default value is `.coffee`
+
+## Screenshot
+
+![Screenshot](extras/screenshot.jpg)
+
+Note: Screenshot is taken in *DEBUG* mode. You will not see these messages unless you set DEBUG to `express-coffee-script`
